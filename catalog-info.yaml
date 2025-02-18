@@ -1,0 +1,21 @@
+apiVersion: backstage.io/v1alpha1
+kind: Resource
+metadata:
+  name: lglje96jz-python-gitops
+  description: This is GitOps manifest for lglje96jz-python   
+  links:
+    - url: https://www.redhat.com/en/solutions/trusted-software-supply-chain
+      title: Trusted Secure Supply Chain 
+      icon: dashboard
+      type: admin-dashboard
+  annotations:    
+    argocd/app-selector: rhtap/gitops=lglje96jz-python
+    backstage.io/kubernetes-id: lglje96jz-python 
+    backstage.io/techdocs-ref: dir:. 
+    janus-idp.io/tekton: lglje96jz-python   
+spec:
+  type: gitops
+  owner: user:guest 
+  lifecycle: experimental
+  dependsOn:
+    - component:lglje96jz-python
